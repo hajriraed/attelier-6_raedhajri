@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function affiche(i,t){
+        document.getElementById('image').src=i;
+        document.getElementById('T').value=t;
+    }
+</script>
+<body>
+    <p><input type="radio" checked onclick="affiche('chien.jpg','j ai 4 pattes')">Chien</p>
+    <p><input type="radio" onclick="affiche('chien.jpg','j ai 4 plumes')">Oiseau </p>
+    <p><input type="radio" onclick="affiche('chien.jpg','j ai 4 ailles')">Papillon</p>
+    <img src="chien.jpg" id="image">
+    <input type="text" id="T">
+</body>
+</html>

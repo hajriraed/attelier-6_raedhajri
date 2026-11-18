@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 6</title>
+</head>
+<body>
+
+    <h3 align="center">COULEURS</h3>
+
+    Couleur :
+    <input type="color" id="couleur">
+    <br><br>
+
+    Nom couleur :
+    <input type="text" id="nom">
+    <br><br>
+
+    <input type="button" value="Ajouter" onclick="Ajouter()">
+
+    <input type="button" value="Retrouver code couleur" onclick="Retrouver()">
+
+    <br><br>
+
+    <select id="liste" size="5" onchange="ChangerCouleur()">
+    </select>
+
+    <script>
+
+        function Ajouter() {
+            var nom = document.getElementById("nom").value;
+            var couleur = document.getElementById("couleur").value;
+            var option = document.createElement("option");
+            option.text = nom;
+            option.value = couleur;
+            document.getElementById("liste").add(option);
+        }
+
+        function Retrouver() {
+            var liste = document.getElementById("liste");
+            var code = liste.value;
+            alert(code);
+        }
+        function ChangerCouleur() {
+            var liste = document.getElementById("liste");
+            var couleur = liste.value;
+            document.getElementById("couleur").value = couleur;
+
+        }
+
+    </script>
+
+</body>
+</html>

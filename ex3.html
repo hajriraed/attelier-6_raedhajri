@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+ function envoi() {
+    let s1=document.getElementById("sel1").selectedIndex;
+    let prix1=document.getElementById("sel1").options[s1].value;
+
+
+    let s2=document.getElementById("sel2").length;
+    let s=0;
+    for (let i = 0; i <s2; i++){
+        if (document.getElementById("sel2").option[i].selected) {
+            s=s+Number(document.getElementById("sel2").options[i].value);
+        }
+        
+    }
+    let s3=document.getElementById("sel3").selectedIndex;
+    let prix3=document.getElementById("sel3").options[s3].value;
+    let res=Number(prix1)+s+Number(prix3);
+    document.getElementById('menu').value="prix a payer" +"\n"+"entree:"+prix1+"\n"+
+    "plat"+s+"\n"+"Desert:"+prix3+"\n"+"total:"+res;
+ }
+</script>
+<body>
+    <h1>Composez votre menu</h1>
+    <hr>
+    <p>choisissez un entrée , un plat et un desert,puis appuyez sur le bouton "Envoi".</p>
+    <br>
+    
+    <select name="" id="sel1" >
+        <option value="18.00">Pate en croute </option>
+        <option value="32.50">Cassoulet</option>
+        <option value="16.50">Glace</option>
+    </select>
+    <select name="" id="sel2" >
+        <option value="18.00">Pate en croute</option>
+        <option value="32.50">Cassoulet</option>
+        <option value="16.50">Glace</option>
+    </select>
+    <select name="" id="sel3" >
+        <option value="18.00">Pate en croute</option>
+        <option value="32.50">Cassoulet</option>
+        <option value="16.50">Glace</option>
+        
+    </select>
+    <input type="submit" value="envoi" onclick="envoi()">
+</body>
+</html>

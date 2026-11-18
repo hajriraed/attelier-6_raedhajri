@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function majuscule() {
+        nom=document.getElementById("nom").value;
+        npm=nom.toUpperCase();
+        document.getElementById("nom").value=npm;
+        
+    }
+    function longeur() {
+        nom=document.getElementById("nom").value;  
+        let nb=0;
+        for (let i= 0; i < nom.length; i++) {
+          nb++;
+        }
+        document.getElementById("nbr").value=nb;
+    }
+    function affiche(msg) {
+        document.getElementById("etat").value=msg;
+    }
+</script>
+<body>
+    <table>
+        <tr>
+            <td><label for="">Nom&prénom<input type="text" id="nom" onmouseout="majuscule()" onkeyup="longeur()" onblur="affiche('vous etes le bienvenue')" onfocus="affiche('saissisez votre nom et prenom')"></label></td>
+        </tr>
+        <tr>
+            <td><label for="">Nombre de caracteres<input type="text" id="nbr" ></label></td>
+        </tr>
+        <tr>
+            <td><label for="">Etat<input type="text" id="etat"></label></td>
+        </tr>
+    </table>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calculer() {
+        let V1=parseInt(document.getElementById("v1").value);
+        let V2=parseInt(document.getElementById("v2").value);
+        if (document.getElementById("a").checked) {
+            alert(V1+V2);
+        }
+        else if (document.getElementById("b").checked) {
+            alert(V1-V2);
+        }
+        else if (document.getElementById("c").checked) {
+            alert(V1/V2);
+        }
+        else if (document.getElementById("d").checked) {
+            
+            alert(V1*V2);
+        
+        }
+
+    }
+</script>
+<body>
+    <label for="">valeur 1 :</label><input type="text" id="v1">
+    <label for="">valeur 2 :</label><input type="text" id="v2">
+    <br>
+    <h2>Opérateurs:</h2>
+    <p><input type="radio" id="a">Addition</p>
+    <p><input type="radio" id="b">Soustraction</p>
+    <p><input type="radio" id="c">Dévision</p>
+    <p><input type="radio" id="d">Multiplication</p>
+    <br>
+    <input type="submit" value="calculer" onclick="calculer()"> <input type="reset" value="annuler">
+    
+</body>
+</html>
